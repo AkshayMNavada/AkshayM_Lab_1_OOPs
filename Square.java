@@ -1,27 +1,12 @@
-public class Square extends Shape{
-    private int side;
+public class Square extends Rectangle{
 
-    public Square(String color, String type, int side) {
-        super(color, type);
-        this.side = side;
+    Square(String color, int side) {
+        super(color, side, side);
     }
 
     @Override
-    public double calculateArea() {
-        return this.side * this.side;
+    void display() {
+        System.out.println("This is " + super.color + " colored square");
     }
 
-    @Override
-    public double calculatePerimeter() {
-        return 4 * this.side;
-    }
-
-    @Override
-    public void drawShape(){
-        System.out.println("Drawing the shape "+ super.type);
-    }
-
-    public void display() {
-        System.out.println("This is a " + super.color + " colored "+ super.type);
-    }
 }
