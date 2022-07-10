@@ -1,21 +1,19 @@
 public class Shape {
     String color;
-    String type;
 
-    public Shape(String color, String type){
+    Shape(String color){
         this.color = color;
-        this.type = type;
     }
 
-    public double calculateArea(){
+    double calculateArea(){
         return 0;
     }
 
-    public double calculatePerimeter(){
+    double calculatePerimeter(){
         return 0;
     }
 
-    public void drawShape(){
-        System.out.println("Drawing the shape "+ this.type);
+    void display(){
+        System.out.println("This is " + this.color + " colored shape");
     }
 }
