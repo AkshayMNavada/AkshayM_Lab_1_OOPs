@@ -1,28 +1,25 @@
-public class Circle extends Shape{
-    private int radius;
+public class Circle extends Shape {
+
+    int radius;
     final double PI = 3.14;
 
-    public Circle(String color, String type, int radius){
-        super(color,type);
+    Circle(String color, int radius) {
+        super(color);
         this.radius = radius;
     }
 
     @Override
-    public double calculateArea() {
-        return PI * this.radius * this.radius;
+    double calculateArea() {
+        return PI * Math.pow(this.radius, 2);
     }
 
     @Override
-    public double calculatePerimeter() {
+    double calculatePerimeter() {
         return 2 * PI * this.radius;
     }
 
     @Override
-    public void drawShape() {
-        super.drawShape();
-    }
-
-    public void display() {
-        System.out.println("This is a " + super.color + " colored "+ super.type);
+    void display() {
+        System.out.println("This is " + super.color + " colored circle");
     }
 }
