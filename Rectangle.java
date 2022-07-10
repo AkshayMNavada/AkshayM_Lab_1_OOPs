@@ -1,29 +1,25 @@
 public class Rectangle extends Shape{
-    int width;
-    int length;
 
-    public Rectangle(String color, String type, int width, int length){
-        super(color, type);
-        this.width = width;
+    int length, width;
+
+    Rectangle(String color, int length, int width) {
+        super(color);
         this.length = length;
+        this.width = width;
     }
 
     @Override
-    public double calculateArea() {
-        return this.width * this.length;
+    double calculateArea() {
+        return this.length * this.width;
     }
 
     @Override
-    public double calculatePerimeter() {
-        return 2 * (this.width + this.length);
+    double calculatePerimeter() {
+        return 2 * (this.length + this.width);
     }
 
     @Override
-    public void drawShape(){
-        System.out.println("Drawing the shape "+ super.type);
-    }
-
-    public void display() {
-        System.out.println("This is a " + super.color + " colored "+ super.type);
+    void display() {
+        System.out.println("This is " + super.color + " colored rectangle");
     }
 }
